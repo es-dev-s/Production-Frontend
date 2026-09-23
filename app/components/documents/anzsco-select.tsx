@@ -196,7 +196,7 @@ export function AnzscoSelect({ value, onChange }: Props) {
               id={listId}
               role="listbox"
               aria-labelledby={labelId}
-              className="fixed z-[80] overflow-hidden rounded-2xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
+              className="fixed z-[80] overflow-hidden rounded-3xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
               style={{
                 top: box.top,
                 left: box.left,

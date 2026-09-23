@@ -60,7 +60,7 @@ export function SettingsPanel() {
       <p className="mt-3 text-[12px] font-medium uppercase tracking-[0.08em] text-muted-soft">
         System
       </p>
-      <div className="mt-2 overflow-hidden rounded-2xl border border-[var(--border)] bg-surface">
+      <div className="mt-2 overflow-hidden rounded-3xl border border-[var(--border)] bg-surface shadow-[var(--shadow-soft)]">
         <Row
           title="Backend"
           subtitle="Live connection"

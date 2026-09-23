@@ -25,11 +25,11 @@ export function NotificationButton() {
         aria-haspopup="dialog"
         title="Notifications"
         onClick={toggle}
-        className="relative flex size-8 shrink-0 items-center justify-center rounded-lg text-muted outline-none transition-colors duration-[var(--shell-duration)] ease-[var(--shell-ease)] hover:text-ink focus-visible:ring-2 focus-visible:ring-[var(--ring)]"
+        className="relative flex size-9 shrink-0 items-center justify-center rounded-2xl text-muted outline-none transition-colors duration-[var(--shell-duration)] ease-[var(--shell-ease)] hover:bg-surface-muted hover:text-ink focus-visible:ring-2 focus-visible:ring-[var(--ring)]"
       >
         <Bell className="size-4" strokeWidth={1.75} absoluteStrokeWidth />
         {unread > 0 ? (
-          <span className="absolute top-[3px] right-[3px] flex h-[14px] min-w-[14px] items-center justify-center rounded-full bg-[#007aff] px-0.5 text-[9px] font-semibold leading-none text-white ring-2 ring-surface">
+          <span className="absolute top-[3px] right-[3px] flex h-[14px] min-w-[14px] items-center justify-center rounded-full bg-accent px-0.5 text-[9px] font-semibold leading-none text-white ring-2 ring-surface">
             {unread > 9 ? "9+" : unread}
           </span>
         ) : (
@@ -68,10 +68,10 @@ export function ProfileButton() {
         onClick={toggle}
         className="flex h-8 shrink-0 items-center outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
       >
-        <span className="flex h-7 max-w-[12rem] items-center gap-1.5 rounded-full border border-[var(--border)] bg-surface pl-[3px] pr-2.5">
+        <span className="flex h-8 max-w-[12rem] items-center gap-1.5 rounded-full border border-[var(--border)] bg-surface pl-1 pr-3 shadow-[var(--shadow-soft)]">
           <span
             aria-hidden
-            className="flex size-[22px] shrink-0 items-center justify-center rounded-full bg-black text-[10px] font-semibold leading-none text-white"
+            className="flex size-6 shrink-0 items-center justify-center rounded-full bg-accent text-[10px] font-semibold leading-none text-white"
           >
             {initial}
           </span>

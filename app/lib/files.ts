@@ -12,21 +12,21 @@ export const STATUS_PILL: Record<
 > = {
   processing: {
     label: "Processing",
-    className: "bg-[#eef4ff] text-[#3b5bcc]",
-    surface: "bg-[#eef4ff]",
+    className: "bg-[#e6f7f1] text-[#1f7a5c]",
+    surface: "bg-[#e6f7f1]",
     openClass:
-      "bg-[#eef4ff] hover:bg-[#eef4ff] focus-visible:bg-[#eef4ff]",
+      "bg-[#e6f7f1] hover:bg-[#e6f7f1] focus-visible:bg-[#e6f7f1]",
   },
   completed: {
     label: "Completed",
-    className: "bg-[#e8f4fc] text-[#1d6fb8]",
-    surface: "bg-[#e8f4fc]",
+    className: "bg-[#dcf5ea] text-[#1a6b4f]",
+    surface: "bg-[#eef9f3]",
     openClass:
-      "bg-[#e8f4fc] hover:bg-[#e8f4fc] focus-visible:bg-[#e8f4fc]",
+      "bg-[#eef9f3] hover:bg-[#eef9f3] focus-visible:bg-[#eef9f3]",
   },
   original: {
     label: "Original",
-    className: "bg-[#e7f6ed] text-[#1f7a4c]",
+    className: "bg-[#d8f3e7] text-[#1f7a4c]",
     surface: "bg-[#f3faf6]",
     openClass:
       "bg-[#f3faf6] hover:bg-[#f3faf6] focus-visible:bg-[#f3faf6]",
@@ -40,10 +40,10 @@ export const STATUS_PILL: Record<
   },
   pending_review: {
     label: "Pending",
-    className: "bg-[#f4efe8] text-[#8a5a2b]",
-    surface: "bg-[#faf6f1]",
+    className: "bg-[#f3efe8] text-[#7a5a2e]",
+    surface: "bg-[#faf7f2]",
     openClass:
-      "bg-[#faf6f1] hover:bg-[#faf6f1] focus-visible:bg-[#faf6f1]",
+      "bg-[#faf7f2] hover:bg-[#faf7f2] focus-visible:bg-[#faf7f2]",
   },
 };
 
@@ -53,13 +53,13 @@ export const UNIQUENESS_PILL: Record<
 > = {
   unique: {
     label: "Unique",
-    className: "bg-[#e8f4fc] text-[#1d6fb8]",
-    hoverClass: "hover:bg-[#d7ecf8]",
+    className: "bg-[#dcf5ea] text-[#1a6b4f]",
+    hoverClass: "hover:bg-[#c8eedd]",
   },
   original: {
     label: "Original",
-    className: "bg-[#e7f6ed] text-[#1f7a4c]",
-    hoverClass: "hover:bg-[#d8efe2]",
+    className: "bg-[#d8f3e7] text-[#1f7a4c]",
+    hoverClass: "hover:bg-[#c5e9d6]",
   },
   duplicate: {
     label: "Duplicate",

@@ -153,7 +153,7 @@ export function PeopleFilterButton() {
               ref={panelRef}
               role="dialog"
               aria-label="Filter documents"
-              className="fixed z-50 overflow-hidden rounded-2xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
+              className="fixed z-50 overflow-hidden rounded-3xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
               style={{
                 top: box.top,
                 right: box.right,
@@ -247,7 +247,7 @@ export function PeopleFilterButton() {
                   type="button"
                   disabled={!dirty}
                   onClick={apply}
-                  className="inline-flex h-8 items-center rounded-xl bg-ink px-3.5 text-[13px] font-medium text-white outline-none transition-[background-color,opacity] duration-[var(--shell-duration)] ease-[var(--shell-ease)] hover:bg-black focus-visible:ring-2 focus-visible:ring-[var(--ring)] disabled:bg-ink/30 disabled:text-white"
+                  className="btn-primary inline-flex h-8 items-center rounded-2xl px-3.5 text-[13px] font-medium"
                 >
                   Apply
                 </button>

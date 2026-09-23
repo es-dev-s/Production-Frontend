@@ -45,7 +45,7 @@ export function ProfilePopover({
         <div className="flex items-center gap-3">
           <span
             aria-hidden
-            className="flex size-10 shrink-0 items-center justify-center rounded-full bg-black text-[15px] font-semibold leading-none text-white"
+            className="flex size-10 shrink-0 items-center justify-center rounded-full bg-accent text-[15px] font-semibold leading-none text-white"
           >
             {signedIn ? initial : "?"}
           </span>

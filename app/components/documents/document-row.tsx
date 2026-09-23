@@ -145,7 +145,7 @@ function SourceAction({
       }}
       className={`inline-flex h-7 ${widthClass} shrink-0 items-center justify-center gap-1 whitespace-nowrap rounded-lg text-[12px] font-medium outline-none transition-[background-color,color] duration-[var(--shell-duration)] ease-[var(--shell-ease)] focus-visible:ring-2 focus-visible:ring-[var(--ring)] disabled:pointer-events-none disabled:opacity-40 ${
         pressed
-          ? "bg-ink text-white"
+          ? "bg-accent text-white"
           : "text-muted hover:bg-surface hover:text-ink"
       }`}
     >
@@ -549,8 +549,8 @@ function SimilarCount({ item }: { item: DocumentItem }) {
       }}
       className={`inline-flex h-[22px] min-w-[2.5rem] w-full max-w-[3.25rem] shrink-0 items-center justify-center rounded-full px-2 text-[11px] font-medium tabular-nums outline-none transition-[background-color,color] duration-[var(--shell-duration)] ease-[var(--shell-ease)] focus-visible:ring-2 focus-visible:ring-[var(--ring)] ${
         open
-          ? "bg-[#d7ecf8] text-[#1d6fb8]"
-          : "bg-[#e8f4fc] text-[#1d6fb8] hover:bg-[#d7ecf8]"
+          ? "bg-[#c8eedd] text-[#1a6b4f]"
+          : "bg-[#dcf5ea] text-[#1a6b4f] hover:bg-[#c8eedd]"
       }`}
     >
       <span className="tabular-nums">{count}</span>

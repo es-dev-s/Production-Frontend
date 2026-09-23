@@ -15,10 +15,10 @@ export function Sidebar() {
   );
 
   return (
-    <aside className="flex h-full w-[var(--sidebar-w)] shrink-0 flex-col items-center bg-surface">
+    <aside className="flex h-full w-[var(--sidebar-w)] shrink-0 flex-col items-center border-r border-[var(--border)] bg-surface">
       <nav
         aria-label="Primary"
-        className="flex w-full flex-1 flex-col items-center gap-1 pt-2"
+        className="flex w-full flex-1 flex-col items-center gap-1.5 pt-3"
       >
         {items.map((item) => (
           <NavIcon
@@ -32,7 +32,7 @@ export function Sidebar() {
 
       <nav
         aria-label="Settings"
-        className="flex w-full flex-col items-center pb-2"
+        className="flex w-full flex-col items-center gap-1.5 pb-3"
       >
         {NAV_FOOTER.map((item) => (
           <NavIcon

@@ -33,7 +33,7 @@ function DocumentSearch() {
         aria-label="Search by client, team, or ANZSCO"
         autoComplete="off"
         spellCheck={false}
-        className="h-8 w-full rounded-xl border border-[var(--border)] bg-canvas pr-3 pl-8 text-[13px] text-ink outline-none placeholder:text-muted-soft focus:border-[var(--border-strong)]"
+        className="h-8 w-full rounded-2xl border border-[var(--border)] bg-surface pr-3 pl-8 text-[13px] text-ink outline-none placeholder:text-muted-soft transition-[border-color,box-shadow] focus:border-accent focus:shadow-[0_0_0_3px_var(--accent-soft)]"
       />
     </label>
   );
@@ -63,9 +63,9 @@ function DocumentStats() {
 
   return (
     <p
-      className={`flex h-8 shrink-0 items-center rounded-xl px-2.5 text-[12px] leading-none tabular-nums transition-[background-color,color] duration-[var(--shell-duration)] ease-[var(--shell-ease)] ${
+      className={`flex h-8 shrink-0 items-center rounded-2xl px-2.5 text-[12px] leading-none tabular-nums transition-[background-color,color] duration-[var(--shell-duration)] ease-[var(--shell-ease)] ${
         narrowed
-          ? "bg-black/[0.06] text-ink"
+          ? "bg-[var(--accent-soft)] text-accent-deep"
           : "text-muted"
       }`}
       title={narrowed ? "Counts for the current filter" : undefined}
@@ -149,7 +149,7 @@ function DocumentAdd() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="inline-flex h-8 w-[9.75rem] shrink-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-xl bg-ink px-4 text-[13px] font-medium tracking-[-0.015em] text-white outline-none transition-[background-color,width] duration-[var(--shell-duration)] ease-[var(--shell-ease)] hover:bg-black focus-visible:ring-2 focus-visible:ring-[var(--ring)] sm:w-[11.5rem] md:w-[13rem]"
+        className="btn-primary inline-flex h-8 w-[9.75rem] shrink-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-2xl px-4 text-[13px] font-medium tracking-[-0.015em] transition-[width] duration-[var(--shell-duration)] ease-[var(--shell-ease)] sm:w-[11.5rem] md:w-[13rem]"
       >
         <Plus className="size-3.5" strokeWidth={1.75} absoluteStrokeWidth />
         <span>Add document</span>
@@ -164,7 +164,7 @@ export function DocumentsToolbar() {
   const clearActionError = useDocumentsStore((s) => s.clearActionError);
 
   return (
-    <div className="sticky top-0 z-10 flex h-[var(--toolbar-h)] shrink-0 items-center gap-2 overflow-hidden border-b border-[var(--border)] bg-surface px-4 [contain:layout]">
+    <div className="sticky top-0 z-10 flex h-[var(--toolbar-h)] shrink-0 items-center gap-2 overflow-hidden border-b border-[var(--border)] bg-surface/90 px-4 backdrop-blur-md [contain:layout]">
       <DocumentSearch />
       <DocumentStats />
       <DateFilterButton />

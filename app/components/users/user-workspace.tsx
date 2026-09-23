@@ -43,9 +43,9 @@ function MemberProfile() {
         <p className="text-[13px] font-medium tracking-[-0.015em] text-ink">Account</p>
       </div>
       <div className="mx-auto w-full max-w-lg px-5 py-8 sm:px-8">
-        <div className="overflow-hidden rounded-2xl border border-[var(--border)] bg-surface">
+        <div className="overflow-hidden rounded-3xl border border-[var(--border)] bg-surface shadow-[var(--shadow-soft)]">
           <div className="flex items-center gap-3 px-4 py-4">
-            <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-ink text-[15px] font-semibold text-white">
+            <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-accent text-[15px] font-semibold text-white">
               {initial}
             </span>
             <div className="min-w-0">
@@ -187,7 +187,7 @@ function AdminUsers() {
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className="inline-flex h-8 w-[9.75rem] shrink-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-xl bg-ink px-4 text-[13px] font-medium tracking-[-0.015em] text-white outline-none hover:bg-black focus-visible:ring-2 focus-visible:ring-[var(--ring)] sm:w-[11.5rem] md:w-[13rem]"
+            className="btn-primary inline-flex h-8 w-[9.75rem] shrink-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-2xl px-4 text-[13px] font-medium tracking-[-0.015em] sm:w-[11.5rem] md:w-[13rem]"
           >
             <Plus className="size-3.5" strokeWidth={1.75} absoluteStrokeWidth />
             <span>Add user</span>
@@ -232,7 +232,7 @@ function AdminUsers() {
                   role="row"
                 >
                   <div className={ROW_CELL} role="cell">
-                    <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-ink text-[11px] font-semibold text-white">
+                    <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-accent text-[11px] font-semibold text-white">
                       {initial}
                     </span>
                     <span className="ml-2.5 min-w-0 truncate text-[13px] font-medium tracking-[-0.01em] text-ink">
@@ -362,7 +362,7 @@ function AddUserForm({
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
-        className="relative z-[1] w-full max-w-[24rem] overflow-hidden rounded-2xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
+        className="relative z-[1] w-full max-w-[24rem] overflow-hidden rounded-3xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
         style={{ animation: "popoverIn 180ms var(--shell-ease) both" }}
       >
         <div className="flex h-12 items-center justify-between px-5">
@@ -410,7 +410,7 @@ function AddUserForm({
           <button
             type="submit"
             disabled={busy}
-            className="inline-flex h-8 items-center rounded-xl bg-ink px-4 text-[13px] font-medium text-white outline-none hover:bg-black disabled:bg-ink/30"
+            className="btn-primary inline-flex h-8 items-center rounded-2xl px-4 text-[13px] font-medium"
           >
             {busy ? "Adding…" : "Add user"}
           </button>

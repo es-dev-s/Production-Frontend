@@ -15,18 +15,18 @@ function AuthedShell({ children }: { children: React.ReactNode }) {
   useDataSync();
 
   return (
-    <div className="relative flex h-full min-h-0 w-full flex-1 flex-col overflow-hidden bg-surface select-none">
+    <div className="relative flex h-full min-h-0 w-full flex-1 flex-col overflow-hidden bg-canvas select-none">
       <div
         aria-hidden
         className="pointer-events-none absolute bottom-0 left-[var(--sidebar-w)] top-0 z-30 w-px bg-[var(--border)]"
       />
-      <div className="flex h-[var(--navbar-h)] w-full shrink-0 items-stretch border-b border-[var(--border)] bg-surface">
+      <div className="flex h-[var(--navbar-h)] w-full shrink-0 items-stretch border-b border-[var(--border)] bg-surface/90 backdrop-blur-md">
         <BrandMark />
         <Navbar />
       </div>
       <div className="flex min-h-0 min-w-0 flex-1">
         <Sidebar />
-        <main className="flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden bg-surface select-text">
+        <main className="flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden bg-canvas select-text">
           {children}
         </main>
       </div>

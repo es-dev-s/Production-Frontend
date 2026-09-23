@@ -21,8 +21,8 @@ export function DocumentsWorkspace() {
     <div className="flex h-full min-h-0 min-w-0 flex-1 flex-col overflow-hidden">
       <DocumentsToolbar />
       {showBanner ? (
-        <div className="border-b border-[var(--border)] bg-[#faf6f1] px-4 py-2.5">
-          <p className="text-[13px] text-[#8a5a2b]">
+        <div className="border-b border-[var(--border)] bg-[var(--accent-soft)] px-4 py-2.5">
+          <p className="text-[13px] text-accent-deep">
             {pending === 1
               ? "1 document is waiting for admin review. You’ll be notified when it’s decided."
               : `${pending} documents are waiting for admin review. You’ll be notified when they’re decided.`}

@@ -163,7 +163,7 @@ export function DateFilterButton() {
               ref={panelRef}
               role="dialog"
               aria-label="Filter by date"
-              className="fixed z-50 overflow-hidden rounded-2xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
+              className="fixed z-50 overflow-hidden rounded-3xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
               style={{
                 top: box.top,
                 right: box.right,
@@ -264,7 +264,7 @@ export function DateFilterButton() {
                         <span
                           className={`relative z-[1] flex size-7 items-center justify-center rounded-full tabular-nums ${
                             edge
-                              ? "bg-ink text-white"
+                              ? "bg-accent text-white"
                               : cell.key === today
                                 ? "ring-1 ring-[var(--ring)]"
                                 : "hover:bg-black/[0.04]"

@@ -836,7 +836,7 @@ function AddDocumentForm({ onClose }: { onClose: () => void }) {
         aria-modal="true"
         aria-labelledby={titleId}
         onSubmit={onSubmit}
-        className="relative z-[1] flex w-full max-w-[min(48rem,calc(100vw-2rem))] max-h-[min(44rem,calc(100vh-2rem))] flex-col overflow-hidden rounded-2xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
+        className="relative z-[1] flex w-full max-w-[min(48rem,calc(100vw-2rem))] max-h-[min(44rem,calc(100vh-2rem))] flex-col overflow-hidden rounded-3xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
         style={{ animation: "popoverIn 180ms var(--shell-ease) both" }}
       >
         <div className="flex h-12 shrink-0 items-center justify-between px-5">
@@ -1091,7 +1091,7 @@ function AddDocumentForm({ onClose }: { onClose: () => void }) {
           <button
             type="submit"
             disabled={!canSubmit}
-            className="inline-flex h-8 min-w-[7.5rem] items-center justify-center gap-1.5 rounded-xl bg-ink px-4 text-[13px] font-medium tracking-[-0.015em] text-white outline-none transition-colors duration-[var(--shell-duration)] ease-[var(--shell-ease)] hover:bg-black focus-visible:ring-2 focus-visible:ring-[var(--ring)] disabled:bg-ink/30 disabled:hover:bg-ink/30"
+            className="btn-primary inline-flex h-8 min-w-[7.5rem] items-center justify-center gap-1.5 rounded-2xl px-4 text-[13px] font-medium tracking-[-0.015em]"
           >
             <Plus className="size-3.5" strokeWidth={1.75} absoluteStrokeWidth />
             {hasDuplicate && !admin ? "Request review" : "Add document"}

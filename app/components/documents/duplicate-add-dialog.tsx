@@ -147,7 +147,7 @@ function DuplicateAddPanel({ pending }: { pending: PendingSourceAdd }) {
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
-        className="relative z-[1] flex w-full max-w-[min(28rem,calc(100vw-2rem))] max-h-[min(36rem,calc(100vh-2rem))] flex-col overflow-hidden rounded-2xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
+        className="relative z-[1] flex w-full max-w-[min(28rem,calc(100vw-2rem))] max-h-[min(36rem,calc(100vh-2rem))] flex-col overflow-hidden rounded-3xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
         style={{ animation: "popoverIn 180ms var(--shell-ease) both" }}
       >
         <div className="flex h-12 shrink-0 items-center justify-between px-5">
@@ -233,7 +233,7 @@ function DuplicateAddPanel({ pending }: { pending: PendingSourceAdd }) {
                   setBusy(false);
                 });
             }}
-            className="inline-flex h-8 min-w-[7.5rem] items-center justify-center rounded-xl bg-ink px-4 text-[13px] font-medium tracking-[-0.015em] text-white outline-none transition-colors duration-[var(--shell-duration)] ease-[var(--shell-ease)] hover:bg-black focus-visible:ring-2 focus-visible:ring-[var(--ring)] disabled:bg-ink/30 disabled:hover:bg-ink/30"
+            className="btn-primary inline-flex h-8 min-w-[7.5rem] items-center justify-center rounded-2xl px-4 text-[13px] font-medium tracking-[-0.015em]"
           >
             {member ? "Request review" : `Add ${count === 1 ? "file" : "files"}`}
           </button>

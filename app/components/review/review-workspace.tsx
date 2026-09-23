@@ -418,7 +418,7 @@ const ReviewRow = memo(function ReviewRow({
               type="button"
               disabled={busy}
               onClick={onApprove}
-              className="inline-flex h-7 w-[4.75rem] shrink-0 items-center justify-center rounded-lg bg-ink text-[12px] font-medium text-white outline-none hover:bg-black disabled:pointer-events-none disabled:bg-ink/30"
+              className="btn-primary inline-flex h-7 w-[4.75rem] shrink-0 items-center justify-center rounded-xl text-[12px] font-medium disabled:pointer-events-none"
             >
               Approve
             </button>
@@ -597,7 +597,7 @@ function DeclineDialog({
         role="alertdialog"
         aria-modal="true"
         aria-labelledby="decline-title"
-        className="relative z-[1] w-full max-w-[22.5rem] overflow-hidden rounded-2xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
+        className="relative z-[1] w-full max-w-[22.5rem] overflow-hidden rounded-3xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
         style={{ animation: "popoverIn 180ms var(--shell-ease) both" }}
       >
         <div className="px-5 pt-5 pb-4">

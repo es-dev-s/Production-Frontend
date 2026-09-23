@@ -75,7 +75,7 @@ export function ViewDocumentDialog() {
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
-        className="relative z-[1] flex w-full max-w-[min(32rem,calc(100vw-2rem))] max-h-[min(40rem,calc(100vh-2rem))] flex-col overflow-hidden rounded-2xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
+        className="relative z-[1] flex w-full max-w-[min(32rem,calc(100vw-2rem))] max-h-[min(40rem,calc(100vh-2rem))] flex-col overflow-hidden rounded-3xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
         style={{ animation: "popoverIn 180ms var(--shell-ease) both" }}
       >
         <div className="flex h-12 shrink-0 items-center justify-between px-5">
@@ -112,7 +112,7 @@ export function ViewDocumentDialog() {
             <button
               type="button"
               onClick={() => window.open(fileHref, "_blank", "noopener,noreferrer")}
-              className="inline-flex h-8 min-w-[7.5rem] items-center justify-center gap-1.5 rounded-xl bg-ink px-4 text-[13px] font-medium tracking-[-0.015em] text-white outline-none transition-colors duration-[var(--shell-duration)] ease-[var(--shell-ease)] hover:bg-black focus-visible:ring-2 focus-visible:ring-[var(--ring)]"
+              className="btn-primary inline-flex h-8 min-w-[7.5rem] items-center justify-center gap-1.5 rounded-2xl px-4 text-[13px] font-medium tracking-[-0.015em]"
             >
               <FolderOpen className="size-3.5" strokeWidth={1.75} absoluteStrokeWidth />
               Open file

@@ -77,7 +77,7 @@ export function ShellPopover({
       ref={panelRef}
       role="dialog"
       aria-label={label}
-      className="fixed z-50 overflow-hidden rounded-2xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
+      className="fixed z-50 overflow-hidden rounded-3xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
       style={{
         top,
         right,

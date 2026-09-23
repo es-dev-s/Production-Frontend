@@ -10,7 +10,7 @@ export function BackendStatusDot() {
     status === "online"
       ? "bg-emerald-600"
       : status === "connecting"
-        ? "bg-[#3b5bcc]"
+        ? "bg-accent"
         : "bg-red-600";
 
   return (

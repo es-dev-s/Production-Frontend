@@ -77,7 +77,7 @@ export function NotificationPopover({
                 >
                   <span
                     className={`mt-[7px] size-[6px] shrink-0 rounded-full ${
-                      item.read ? "bg-transparent" : "bg-[#007aff]"
+                      item.read ? "bg-transparent" : "bg-accent"
                     }`}
                     aria-hidden
                   />
@@ -94,11 +94,11 @@ export function NotificationPopover({
                       {item.detail}
                     </span>
                     {item.kind === "review" ? (
-                      <span className="mt-1.5 inline-flex h-5 items-center rounded-full bg-[#f4efe8] px-1.5 text-[10px] font-medium text-[#8a5a2b]">
+                      <span className="mt-1.5 inline-flex h-5 items-center rounded-full bg-[var(--accent-soft)] px-1.5 text-[10px] font-medium text-accent-deep">
                         Open Review
                       </span>
                     ) : item.kind === "review_pending" ? (
-                      <span className="mt-1.5 inline-flex h-5 items-center rounded-full bg-[#f4efe8] px-1.5 text-[10px] font-medium text-[#8a5a2b]">
+                      <span className="mt-1.5 inline-flex h-5 items-center rounded-full bg-[var(--accent-soft)] px-1.5 text-[10px] font-medium text-accent-deep">
                         Pending
                       </span>
                     ) : null}

@@ -38,14 +38,14 @@ function ReviewCue({ pathname }: { pathname: string }) {
 
   const label = pending === 1 ? "1 in review" : `${pending} in review`;
   const className =
-    "inline-flex h-6 max-w-[9rem] shrink-0 items-center rounded-full bg-[#f4efe8] px-2 text-[11px] font-medium leading-none text-[#8a5a2b]";
+    "inline-flex h-6 max-w-[9rem] shrink-0 items-center rounded-full bg-[var(--accent-soft)] px-2.5 text-[11px] font-medium leading-none text-accent-deep";
 
   if (isAdmin(role)) {
     if (pathname === "/review") {
       return <span className={className}>{label}</span>;
     }
     return (
-      <Link href="/review" className={`${className} outline-none hover:bg-[#efe6db] focus-visible:ring-2 focus-visible:ring-[var(--ring)]`}>
+      <Link href="/review" className={`${className} outline-none transition-colors hover:bg-surface-muted focus-visible:ring-2 focus-visible:ring-[var(--ring)]`}>
         {label} · decide
       </Link>
     );

@@ -278,7 +278,7 @@ export function DuplicateNote({
               id={panelId}
               role="dialog"
               aria-label="Duplicate note"
-              className="fixed z-[90] overflow-hidden rounded-2xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
+              className="fixed z-[90] overflow-hidden rounded-3xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
               style={{
                 top: spot.top,
                 left: spot.left,
@@ -414,7 +414,7 @@ export function IncomingDuplicateNote({
         }}
         className={`relative inline-flex size-5 shrink-0 items-center justify-center rounded-lg outline-none transition-[background-color,color] duration-[var(--shell-duration)] ease-[var(--shell-ease)] focus-visible:ring-2 focus-visible:ring-[var(--ring)] ${
           open || saved
-            ? "bg-[#eef4ff] text-[#3b5bcc]"
+            ? "bg-[var(--accent-soft)] text-accent-deep"
             : required
               ? "text-orange-700/80 hover:bg-orange-100 hover:text-orange-800"
               : "text-muted hover:bg-black/[0.06] hover:text-ink"
@@ -432,7 +432,7 @@ export function IncomingDuplicateNote({
               id={panelId}
               role="dialog"
               aria-label="Reason for this upload"
-              className="fixed z-[90] overflow-hidden rounded-2xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
+              className="fixed z-[90] overflow-hidden rounded-3xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
               style={{
                 top: spot.top,
                 left: spot.left,
@@ -495,7 +495,7 @@ export function IncomingDuplicateNote({
                   type="button"
                   onClick={save}
                   disabled={required && draft.trim().length === 0}
-                  className="inline-flex h-7 shrink-0 items-center rounded-lg bg-ink px-3 text-[12px] font-medium text-white outline-none hover:bg-black focus-visible:ring-2 focus-visible:ring-[var(--ring)] disabled:bg-ink/30"
+                  className="btn-primary inline-flex h-7 shrink-0 items-center rounded-xl px-3 text-[12px] font-medium"
                 >
                   Save
                 </button>
@@ -567,7 +567,7 @@ export function MatchPeek({
               id={panelId}
               role="dialog"
               aria-label="Matched source details"
-              className="fixed z-[90] overflow-hidden rounded-2xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
+              className="fixed z-[90] overflow-hidden rounded-3xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
               style={{
                 top: spot.top,
                 left: spot.left,

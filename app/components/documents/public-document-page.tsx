@@ -42,14 +42,14 @@ export function PublicDocumentPage({ id }: { id: string }) {
   return (
     <div className="mx-auto flex min-h-full w-full max-w-[32rem] flex-col px-5 py-8">
       <div className="mb-6 flex items-center gap-2.5">
-        <span className="flex size-[22px] items-center justify-center rounded-[6px] bg-black text-white">
+        <span className="flex size-7 items-center justify-center rounded-xl bg-accent text-white">
           <ScanText className="size-3" strokeWidth={1.75} absoluteStrokeWidth />
         </span>
         <p className="text-[13px] font-medium tracking-[-0.01em] text-ink">
           Web OCR
         </p>
       </div>
-      <div className="rounded-2xl border border-[var(--border)] bg-surface px-5 py-5 shadow-[var(--shadow-soft)]">
+      <div className="rounded-3xl border border-[var(--border)] bg-surface px-5 py-5 shadow-[var(--shadow-soft)]">
         {state === "loading" ? (
           <p className="py-10 text-center text-[13px] text-muted">Loading…</p>
         ) : state === "missing" ? (

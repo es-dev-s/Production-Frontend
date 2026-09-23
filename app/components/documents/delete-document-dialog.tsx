@@ -79,7 +79,7 @@ export function DeleteDocumentDialog() {
         aria-modal="true"
         aria-labelledby={titleId}
         aria-describedby={detailId}
-        className="relative z-[1] w-full max-w-[22.5rem] overflow-hidden rounded-2xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
+        className="relative z-[1] w-full max-w-[22.5rem] overflow-hidden rounded-3xl border border-[var(--border)] bg-surface shadow-[var(--shadow-elevated)]"
         style={{ animation: "popoverIn 180ms var(--shell-ease) both" }}
       >
         <div className="px-5 pt-5 pb-4">
