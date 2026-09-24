@@ -61,7 +61,7 @@ export function DeleteDocumentDialog() {
 
   if (!open || !item || typeof document === "undefined") return null;
 
-  const files = item.sources.length;
+  const files = item.sourceCount;
   const fileLabel = files === 1 ? "1 source file" : `${files} source files`;
 
   return createPortal(

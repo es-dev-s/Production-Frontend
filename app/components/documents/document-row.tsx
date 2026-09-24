@@ -612,7 +612,7 @@ export const DocumentRow = memo(function DocumentRow({
         </div>
         <div className={`${ROW_CELL} justify-center`}>
           <p className="text-[13px] tabular-nums text-ink">
-            {item.sources.length}
+            {item.sourceCount}
             <span className="text-muted-soft"> / {SOURCE_TOTAL}</span>
           </p>
         </div>

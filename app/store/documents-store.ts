@@ -91,6 +91,7 @@ export type DocumentItem = {
   url: string
   fileUrl?: string
   sources: SourceFile[]
+  sourceCount: number
   reviewNote?: string
   reviewRequestedAt?: string
   titlePending?: boolean
@@ -300,7 +301,7 @@ export function listedDocuments(items: DocumentItem[], role: string) {
 
 export function listedFileCount(items: DocumentItem[], role: string) {
   return listedDocuments(items, role).reduce(
-    (sum, item) => sum + item.sources.length,
+    (sum, item) => sum + item.sourceCount,
     0,
   );
 }
@@ -465,9 +466,11 @@ function preferSource(prev: SourceFile | undefined, next: SourceFile): SourceFil
 
 function preferItem(prev: DocumentItem, next: DocumentItem): DocumentItem {
   const incoming =
-    next.sources.length === 0 && prev.sources.length > 0
-      ? prev.sources
-      : next.sources;
+    next.status === "rejected"
+      ? next.sources
+      : next.sources.length === 0 && prev.sources.length > 0
+        ? prev.sources
+        : next.sources;
   const prevById = new Map(prev.sources.map((source) => [source.id, source]));
   const sources = incoming.map((source) =>
     preferSource(prevById.get(source.id), source),
@@ -486,6 +489,7 @@ function preferItem(prev: DocumentItem, next: DocumentItem): DocumentItem {
     fileUrl: next.fileUrl || prev.fileUrl,
     status,
     sources,
+    sourceCount: Math.max(next.sourceCount, sources.length),
     titlePending: isTitlePending(title),
     titleSimilar: uniqueSimilar(
       sources.flatMap((source) => source.titleSimilar),
@@ -550,6 +554,7 @@ export function mapDocument(raw: ApiDocument): DocumentItem {
     url: raw.url,
     fileUrl: raw.file_url,
     sources,
+    sourceCount: Math.max(raw.source_count ?? 0, sources.length),
     reviewNote: raw.review_note?.trim() || undefined,
     reviewRequestedAt: raw.review_requested_at || undefined,
     titlePending:

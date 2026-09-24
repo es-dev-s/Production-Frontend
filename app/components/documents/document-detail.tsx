@@ -204,7 +204,7 @@ export function DocumentDetail({
         <div className="mb-1.5 flex h-5 items-center justify-between">
           <p className="text-[12px] font-medium text-muted">Files</p>
           <p className="text-[11px] tabular-nums text-muted-soft">
-            {item.sources.length} / {SOURCE_TOTAL}
+            {item.sourceCount} / {SOURCE_TOTAL}
           </p>
         </div>
         {onAdd ? (

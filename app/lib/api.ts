@@ -97,6 +97,7 @@ export type ApiDocument = {
   url: string
   file_url: string
   sources: ApiSource[]
+  source_count?: number
   review_note?: string
   review_requested_at?: string
   title_pending?: boolean
