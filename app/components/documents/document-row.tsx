@@ -19,10 +19,10 @@ import {
 } from "@/app/store/documents-store";
 
 export const COLS =
-  "grid-cols-[minmax(8.5rem,1.25fr)_minmax(6.75rem,0.7fr)_7.25rem_4.75rem_minmax(6.5rem,0.65fr)_3.75rem_8.75rem]";
+  "grid-cols-[minmax(7.5rem,1fr)_minmax(5.75rem,0.55fr)_7.5rem_5rem_minmax(7rem,0.9fr)_3.75rem_minmax(8.75rem,0.85fr)]";
 
 const SOURCE_COLS =
-  "grid-cols-[minmax(0,1.4fr)_minmax(0,0.9fr)_8.75rem_4.25rem_8.75rem_9.5rem]";
+  "grid-cols-[minmax(0,1.4fr)_minmax(0,0.9fr)_8.75rem_4.25rem_9.25rem_9.5rem]";
 
 const ACTION_SLOT = "flex w-full min-w-0 items-center justify-end gap-1";
 
@@ -85,8 +85,8 @@ export function DocumentsTableHeader() {
     >
       <div className={HEADER_CELL}>User</div>
       <div className={HEADER_CELL}>ERP</div>
-      <div className={HEADER_CELL}>Status</div>
-      <div className={HEADER_CELL}>Source</div>
+      <div className={`${HEADER_CELL} justify-center`}>Status</div>
+      <div className={`${HEADER_CELL} justify-center`}>Source</div>
       <div className={HEADER_CELL}>Uploaded</div>
       <div className={HEADER_CELL}>Similar</div>
       <div className={`${HEADER_CELL} justify-end`}>Action</div>
@@ -101,7 +101,7 @@ function SourceHeader() {
       <div className={SOURCE_HEADER_CELL}>Client</div>
       <div className={SOURCE_HEADER_CELL}>Uploaded</div>
       <div className={SOURCE_HEADER_CELL}>Score</div>
-      <div className={SOURCE_HEADER_CELL}>Status</div>
+      <div className={`${SOURCE_HEADER_CELL} justify-center pl-3`}>Status</div>
       <div className={`${SOURCE_HEADER_CELL} justify-end`}>Action</div>
     </div>
   );
@@ -219,7 +219,7 @@ function SourceStatus({
       <UniquenessPill value="duplicate" />
     );
   return (
-    <span className="flex min-w-0 items-center gap-1">
+    <span className="flex min-w-0 items-center justify-center gap-1">
       {pill}
       {source.uniqueness === "duplicate" ? (
         <DuplicateNote
@@ -258,8 +258,8 @@ function DuplicateDetails({ matches }: { matches: DuplicateMatch[] }) {
               {match.score.toFixed(1)}
             </p>
           </div>
-          <div className={SOURCE_BODY_CELL}>
-            <span className="flex min-w-0 items-center gap-1">
+          <div className={`${SOURCE_BODY_CELL} justify-center pl-3`}>
+            <span className="flex min-w-0 items-center justify-center gap-1">
               <UniquenessPill value={match.uniqueness} />
               {match.note?.trim() ? (
                 <DuplicateNote
@@ -333,7 +333,7 @@ const SourceRow = memo(function SourceRow({
             {source.score !== null ? source.score.toFixed(1) : "—"}
           </p>
         </div>
-        <div className={SOURCE_BODY_CELL}>
+        <div className={`${SOURCE_BODY_CELL} justify-center pl-3`}>
           <SourceStatus
             source={source}
             member={member}
@@ -607,11 +607,11 @@ export const DocumentRow = memo(function DocumentRow({
         <div className={ROW_CELL}>
           <p className="min-w-0 truncate font-mono text-[12px] tabular-nums text-ink">{item.erp}</p>
         </div>
-        <div className={ROW_CELL}>
+        <div className={`${ROW_CELL} justify-center`}>
           <StatusPill status={tone} />
         </div>
-        <div className={ROW_CELL}>
-          <p className="w-full text-[13px] tabular-nums text-ink">
+        <div className={`${ROW_CELL} justify-center`}>
+          <p className="text-[13px] tabular-nums text-ink">
             {item.sources.length}
             <span className="text-muted-soft"> / {SOURCE_TOTAL}</span>
           </p>
