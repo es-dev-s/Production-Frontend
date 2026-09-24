@@ -1,6 +1,12 @@
 export const SOURCE_TOTAL = 4;
 
-export type DocumentStatus = "completed" | "duplicate" | "processing" | "pending_review";
+export type DocumentStatus =
+  | "completed"
+  | "duplicate"
+  | "processing"
+  | "pending_review"
+  | "approved"
+  | "rejected";
 
 export type StatusTone = DocumentStatus | "original";
 
@@ -45,6 +51,20 @@ export const STATUS_PILL: Record<
     openClass:
       "bg-[#faf7f2] hover:bg-[#faf7f2] focus-visible:bg-[#faf7f2]",
   },
+  approved: {
+    label: "Approved",
+    className: "bg-[#dcf5ea] text-[#1a6b4f]",
+    surface: "bg-[#eef9f3]",
+    openClass:
+      "bg-[#eef9f3] hover:bg-[#eef9f3] focus-visible:bg-[#eef9f3]",
+  },
+  rejected: {
+    label: "Rejected",
+    className: "bg-[#f3e8e8] text-[#8a3a3a]",
+    surface: "bg-[#faf4f4]",
+    openClass:
+      "bg-[#faf4f4] hover:bg-[#faf4f4] focus-visible:bg-[#faf4f4]",
+  },
 };
 
 export const UNIQUENESS_PILL: Record<
@@ -77,7 +97,15 @@ export function uniquenessMeta(value: SourceUniqueness) {
 }
 
 export function parseDocumentStatus(value: string | undefined): DocumentStatus {
-  if (value === "processing" || value === "duplicate" || value === "pending_review") return value;
+  if (
+    value === "processing" ||
+    value === "duplicate" ||
+    value === "pending_review" ||
+    value === "approved" ||
+    value === "rejected"
+  ) {
+    return value;
+  }
   if (value === "original") return "duplicate";
   return "completed";
 }

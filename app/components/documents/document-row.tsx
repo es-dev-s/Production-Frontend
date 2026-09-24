@@ -56,7 +56,7 @@ function UniquenessPill({ value }: { value: SourceUniqueness }) {
 function rowTone(item: DocumentItem, expanded: boolean): StatusTone {
   if (
     expanded &&
-    item.status === "duplicate" &&
+    (item.status === "duplicate" || item.status === "approved") &&
     item.sources.some((source) => source.uniqueness === "original")
   ) {
     return "original";
@@ -426,6 +426,7 @@ function DocumentSources({ item }: { item: DocumentItem }) {
   );
   const canAdd =
     item.status !== "pending_review" &&
+    item.status !== "rejected" &&
     item.sources.length < SOURCE_TOTAL &&
     !adding;
 
@@ -464,7 +465,9 @@ function DocumentSources({ item }: { item: DocumentItem }) {
       <SourceHeader />
       {item.sources.length === 0 ? (
         <p className="border-t border-[var(--border)] px-4 py-3 text-[13px] text-muted">
-          No files on this document.
+          {item.status === "rejected"
+            ? "This upload was rejected and the file was not kept."
+            : "No files on this document."}
         </p>
       ) : (
         item.sources.map((source) => (

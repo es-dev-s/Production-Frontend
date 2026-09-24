@@ -85,7 +85,10 @@ export function DocumentsTable() {
   const rows = useMemo(() => {
     const visible =
       role === "admin"
-        ? items.filter((item) => item.status !== "pending_review")
+        ? items.filter(
+            (item) =>
+              item.status !== "pending_review" && item.status !== "rejected",
+          )
         : items;
     const untitled = visible.filter((item) => item.titlePending);
     const titled = visible.filter((item) => !item.titlePending);

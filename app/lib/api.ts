@@ -355,7 +355,7 @@ export function approveReview(id: string) {
 }
 
 export function rejectReview(id: string) {
-  return request<{ ok: boolean }>(`/v1/reviews/${id}/reject`, { method: "POST" });
+  return request<ApiDocument>(`/v1/reviews/${id}/reject`, { method: "POST" });
 }
 
 export function eventsUrl() {

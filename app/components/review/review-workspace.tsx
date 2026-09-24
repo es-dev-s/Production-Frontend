@@ -39,7 +39,6 @@ export function ReviewWorkspace() {
   const router = useRouter();
   const role = useUserStore((s) => s.role);
   const upsert = useDocumentsStore((s) => s.upsert);
-  const dropLocal = useDocumentsStore((s) => s.dropLocal);
   const refresh = useDocumentsStore((s) => s.refresh);
   const items = useDocumentsStore((s) => s.items);
   const [query, setQuery] = useState("");
@@ -130,8 +129,7 @@ export function ReviewWorkspace() {
     setBusyId(item.id);
     setActionError("");
     try {
-      await rejectReview(item.id);
-      dropLocal(item.id);
+      upsert(mapDocument(await rejectReview(item.id)));
       setDecline(null);
     } catch {
       setActionError("Could not decline this duplicate. Try again.");

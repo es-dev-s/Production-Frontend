@@ -292,7 +292,9 @@ function visibleOf(state: {
 
 export function listedDocuments(items: DocumentItem[], role: string) {
   return role === "admin"
-    ? items.filter((item) => item.status !== "pending_review")
+    ? items.filter(
+        (item) => item.status !== "pending_review" && item.status !== "rejected",
+      )
     : items;
 }
 

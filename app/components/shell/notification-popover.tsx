@@ -101,6 +101,14 @@ export function NotificationPopover({
                       <span className="mt-1.5 inline-flex h-5 items-center rounded-full bg-[var(--accent-soft)] px-1.5 text-[10px] font-medium text-accent-deep">
                         Pending
                       </span>
+                    ) : item.kind === "approved" ? (
+                      <span className="mt-1.5 inline-flex h-5 items-center rounded-full bg-[#dcf5ea] px-1.5 text-[10px] font-medium text-[#1a6b4f]">
+                        Approved
+                      </span>
+                    ) : item.kind === "rejected" ? (
+                      <span className="mt-1.5 inline-flex h-5 items-center rounded-full bg-[#f3e8e8] px-1.5 text-[10px] font-medium text-[#8a3a3a]">
+                        Rejected
+                      </span>
                     ) : null}
                   </span>
                 </button>
